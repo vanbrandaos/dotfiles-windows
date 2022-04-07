@@ -29,6 +29,10 @@ if ($WindowsTerminalDir) {
         #Set-Location -Path "C:\wsl\fonts"        
     }
 
+    echo 'Configurando starship...'    
+    New-Item -Path '~/.config' -ItemType File -Force
+    Add-Symlink "C:\Users\$env:UserName\.config\starship.toml" "C:\Users\$env:UserName\dotfiles-windows\git\starship.toml" > $null
+
     echo 'Fazendo download das fontes necessárias...'    
     Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip" -OutFile "C:\wsl\fonts\FantasqueSansMono.zip"        
     echo 'Extraindo fonte...'    
@@ -38,6 +42,7 @@ if ($WindowsTerminalDir) {
 
     echo '### Concluído'
     echo 'Instale as fontes 'Fantasque Sans Mono Regular Nerd Font Complete.ttf',  e reinicie o terminal'
+
 
 } else {
     echo "Ocorreu um erro. Verifique se o windows terminal está instalado."
