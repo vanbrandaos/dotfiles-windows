@@ -3,21 +3,6 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "swapPane",
-                "direction": "down"
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
-        },
-        {
             "command": "unbound",
             "keys": "ctrl+tab"
         },
@@ -246,15 +231,19 @@
             "keys": "ctrl+shift+y"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
         },
         {
             "command": 
             {
-                "action": "newTab"
-            },
-            "keys": "ctrl+shift+t"
+                "action": "swapPane",
+                "direction": "down"
+            }
         },
         {
             "command": 
@@ -266,9 +255,13 @@
         {
             "command": 
             {
-                "action": "splitPane"
+                "action": "newTab"
             },
-            "keys": "ctrl+shift+enter"
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
         },
         {
             "command": 
@@ -277,6 +270,13 @@
                 "direction": "left"
             },
             "keys": "ctrl+shift+left"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane"
+            },
+            "keys": "ctrl+shift+enter"
         },
         {
             "command": 
@@ -502,7 +502,7 @@
                 },
                 "guid": "{e7904b19-2c9d-4066-9cdc-1321b9dc659f}",
                 "hidden": false,
-                "icon": "C:\\Users\\vbs_r\\.dotfiles\\dotfiles-windows\\terminal\\icons\\arch.ico",
+                "icon": "C:\\Users\\vbs_r\\dotfiles-windows\\terminal\\icons\\arch.ico",
                 "name": "Arch",
                 "scrollbarState": "hidden",
                 "startingDirectory": "\\\\wsl$\\Arch\\home\\soma"
