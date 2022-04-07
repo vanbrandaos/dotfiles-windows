@@ -1,5 +1,6 @@
 
 
+
 # Setup Windows
 
 Those are my personal settings for my Windows' environments. Here I have a bit of PowerShell files for Windows, including common application installation through Chocolatey, and developer-minded Windows configuration defaults.
@@ -13,7 +14,7 @@ Using PowerShell:
   (**Once you close, it will default back to the original execution policy*)
 -  powershell -executionpolicy bypass -File .\install.ps1
 
-**To execute any command to change execution policy, you must have administrator permission, so open PowerShell command prompt with Run as administrator**
+**To execute any command to change execution policy, you must have administrator permission, open PowerShell command prompt with Run as administrator**
 
 1. Install [Chocolatey](https://chocolatey.org/install) (*run powershell as administrator*) 
 ```bash
@@ -41,14 +42,6 @@ Using PowerShell:
 ```bash
     choco install ChocolateyGUI
 ```
-# Git
-
-1. Create a new SSH key
-```bash
-    cd git
-    powershell -executionpolicy bypass -File .\configure-ssh.ps1
-```
-
 # Windows Terminal
 
 1. Install Windows Terminal (option 5)
@@ -56,14 +49,35 @@ Using PowerShell:
     cd chocolatey
     powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1
 ```
-2. Import settings.json (themes, shortcuts, profiles, etc) and install nerd-fonts
+2. Import settings.json (themes, shortcuts profiles, etc), starship and install nerd-fonts
 ```bash
     cd terminal
     powershell -executionpolicy bypass -File ./setup-windows-terminal.ps1
 ```
 
+# Git
+
+1. Create a new SSH key
+```bash
+    cd git
+    powershell -executionpolicy bypass -File .\configure-ssh.ps1
+```
+2. Import bash profile (Bash with Windows Terminal)
+```bash
+    cd git
+    powershell -executionpolicy bypass -File .\setup-bash.ps1
+```
+
+# Code
+
+1. Install extensions
+```bash
+    cd vscode
+    powershell -executionpolicy bypass -File .\install-extensions.ps1
+    powershell -executionpolicy bypass -File .\install-java-extensions.ps1
+```
+
 # Setup WSL2 :
-**Run Windows Terminal as administrator and open PowerShell tab*
 
 1. Copy .wslconfig file
 ```bash
