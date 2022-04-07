@@ -1,0 +1,10 @@
+googlechrome
+teamviewer
+microsoft-teams
+7zip
+spotify
+googledrive
+adobereader
+onedrive
+wget
+dropbox

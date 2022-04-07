@@ -1,0 +1,3 @@
+{
+  "hosts": ["unix:///mnt/c/wsl/shared-docker/docker.sock"]
+}

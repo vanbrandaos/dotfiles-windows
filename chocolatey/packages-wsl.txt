@@ -1,0 +1,2 @@
+microsoft-windows-terminal
+vscode
