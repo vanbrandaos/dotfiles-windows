@@ -3,6 +3,21 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "down"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
             "command": "unbound",
             "keys": "ctrl+tab"
         },
@@ -29,10 +44,6 @@
         {
             "command": "unbound",
             "keys": "alt+shift+plus"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+d"
         },
         {
             "command": "unbound",
@@ -235,19 +246,15 @@
             "keys": "ctrl+shift+y"
         },
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
+            "command": "paste",
+            "keys": "ctrl+v"
         },
         {
             "command": 
             {
-                "action": "swapPane",
-                "direction": "down"
-            }
+                "action": "newTab"
+            },
+            "keys": "ctrl+shift+t"
         },
         {
             "command": 
@@ -259,13 +266,9 @@
         {
             "command": 
             {
-                "action": "newTab"
+                "action": "splitPane"
             },
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "keys": "ctrl+shift+enter"
         },
         {
             "command": 
@@ -274,13 +277,6 @@
                 "direction": "left"
             },
             "keys": "ctrl+shift+left"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane"
-            },
-            "keys": "ctrl+shift+enter"
         },
         {
             "command": 
@@ -305,7 +301,8 @@
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
-            }
+            },
+            "keys": "ctrl+shift+d"
         },
         {
             "command": 
