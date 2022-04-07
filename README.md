@@ -42,8 +42,8 @@ About PowerShell:
 ```
 5. Create a new SSH key
 ```bash
-	cd git
-	powershell -executionpolicy bypass -File .\configure-ssh.ps1
+    cd git
+    powershell -executionpolicy bypass -File .\configure-ssh.ps1
 ```
 
 # Windows Terminal
