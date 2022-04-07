@@ -502,7 +502,7 @@
                 },
                 "guid": "{e7904b19-2c9d-4066-9cdc-1321b9dc659f}",
                 "hidden": false,
-                "icon": "C:\\Users\\vbs_r\\dotfiles-windows\\terminal\\icons\\arch.ico",
+                "icon": "%USERPROFILE%\\dotfiles-windows\\terminal\\icons\\arch.ico",
                 "name": "Arch",
                 "scrollbarState": "hidden",
                 "startingDirectory": "\\\\wsl$\\Arch\\home\\soma"
