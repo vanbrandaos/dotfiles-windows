@@ -1,0 +1,1 @@
+Get-Content "./code-extensions.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{code --install-extension $_ --force}
