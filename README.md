@@ -126,7 +126,7 @@ About PowerShell:
 ```
 2. [Setup ArchWSL for user and keyrings](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/) 
 3. Follow the [previous tutorial](https://github.com/vanbrandaos/.dotfiles)
-4. Install find-the-command on [.dotfiles](https://github.com/vanbrandaos/.dotfiles) package and set fish as default shell
+4. Install find-the-command from [.dotfiles](https://github.com/vanbrandaos/.dotfiles) package and set fish as default shell
 ```bash
     cd scripts/wsl
     ./setup-fish.sh
