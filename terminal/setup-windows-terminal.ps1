@@ -31,7 +31,7 @@ if ($WindowsTerminalDir) {
 
     echo 'Configurando starship...'    
     New-Item -Path '~/.config' -ItemType File -Force
-    Add-Symlink "C:\Users\$env:UserName\.config\starship.toml" "C:\Users\$env:UserName\dotfiles-windows\git\starship.toml" > $null
+    Add-Symlink "C:\Users\$env:UserName\.config\starship.toml" "C:\Users\$env:UserName\dotfiles-windows\terminal\starship.toml" > $null
 
     echo 'Fazendo download das fontes necessárias...'    
     Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip" -OutFile "C:\wsl\fonts\FantasqueSansMono.zip"        
