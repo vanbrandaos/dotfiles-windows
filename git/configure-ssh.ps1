@@ -27,10 +27,10 @@ if (!(Test-Path -Path "C:\Users\$env:UserName\.ssh")) {
 }
 
 Write-Output "Replacing .gitconfig"
-Add-Symlink "C:\Users\$env:UserName\.gitconfig" "C:\Users\$env:UserName\dotfiles-windows\bootstrap\.gitconfig" > $null
-Add-Symlink "C:\Users\$env:UserName\.ssh\$keyname" "C:\Users\$env:UserName\dotfiles-windows\bootstrap\$keyname" > $null
-Add-Symlink "C:\Users\$env:UserName\.ssh\$keyname.pub" "C:\Users\$env:UserName\dotfiles-windows\bootstrap\$keyname.pub" > $null
-Add-Symlink "C:\Users\$env:UserName\.ssh\config" "C:\Users\$env:UserName\dotfiles-windows\bootstrap\config" > $null
+Add-Symlink "C:\Users\$env:UserName\.gitconfig" "C:\Users\$env:UserName\dotfiles-windows\git\.gitconfig" > $null
+Add-Symlink "C:\Users\$env:UserName\.ssh\$keyname" "C:\Users\$env:UserName\dotfiles-windows\git\$keyname" > $null
+Add-Symlink "C:\Users\$env:UserName\.ssh\$keyname.pub" "C:\Users\$env:UserName\dotfiles-windows\git\$keyname.pub" > $null
+Add-Symlink "C:\Users\$env:UserName\.ssh\config" "C:\Users\$env:UserName\dotfiles-windows\git\config" > $null
 Write-Output "Done"
 
 echo "KEY CREATED DO NOT FORGET TO UPLOAD THE PUBLIC PART!!!"
