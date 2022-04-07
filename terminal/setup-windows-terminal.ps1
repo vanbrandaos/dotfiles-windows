@@ -30,7 +30,8 @@ if ($WindowsTerminalDir) {
     }
 
     echo 'Configurando starship...'    
-    New-Item -Path '~/.config' -ItemType File -Force
+    New-Item -Path C:\Users\$env:UserName\.config -ItemType Directory -Force
+    New-Item -Path C:\Users\$env:UserName\.config\starship.toml -ItemType File -Force
     Add-Symlink "C:\Users\$env:UserName\.config\starship.toml" "C:\Users\$env:UserName\dotfiles-windows\terminal\starship.toml" > $null
 
     echo 'Fazendo download das fontes necessárias...'    
