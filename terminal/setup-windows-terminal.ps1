@@ -20,7 +20,7 @@ $StorePackages = "C:\Users\$env:UserName\AppData\Local\Packages\*Microsoft.Windo
 $WindowsTerminalDir = Get-ChildItem $StorePackages -ErrorAction SilentlyContinue
 if ($WindowsTerminalDir) {
     echo 'Configurando o Windows Terminal com arquivo settings.xml'  
-    Add-Symlink "${WindowsTerminalDir}\LocalState\settings.json" "C:\Users\$env:UserName\.dotfiles\dotfiles-windows\terminal\settings.json" > $null
+    Add-Symlink "${WindowsTerminalDir}\LocalState\settings.json" "C:\Users\$env:UserName\dotfiles-windows\terminal\settings.json" > $null
     echo 'Feito!' 
 
     if (!(Test-Path -Path "C:\wsl\fonts")) {
@@ -46,7 +46,7 @@ if ($WindowsTerminalDir) {
 #if ((Test-Path -Path "C:\Users\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState")) {
 #    echo 'Configurando o Windows Terminal com arquivo settings.xml'    
 #    echo 'Enviando settings.json para pasta de configuracao WT...' 
-    #Copy-Item "C:\Users\$env:UserName\.dotfiles\dotfiles-windows\terminal\settings.json" -Destination "C:\Users\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
+    #Copy-Item "C:\Users\$env:UserName\dotfiles-windows\terminal\settings.json" -Destination "C:\Users\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 
 #    if (!(Test-Path -Path "C:\wsl\fonts")) {
 #        Set-Location -Path C:\
