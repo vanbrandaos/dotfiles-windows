@@ -40,6 +40,11 @@ About PowerShell:
 ```bash
     choco install ChocolateyGUI
 ```
+5. Create a new SSH key
+```bash
+	cd git
+	powershell -executionpolicy bypass -File .\configure-ssh.ps1
+```
 
 # Windows Terminal
 
@@ -97,7 +102,7 @@ About PowerShell:
 
 	- Custom domain:
 
-		 access the WSL2 VM from the Windows host, see update-host.sh [.dotfiles](https://github.com/vanbrandaos/.dotfiles). This script, when called, updates your Windows hosts file with the WSL2 VM's IP address. Please change hostname.
+		 access the WSL2 VM from the Windows host, see update-host.sh (In this[.dotfiles](https://github.com/vanbrandaos/.dotfiles)). This script, when called, updates your Windows hosts file with the WSL2 VM's IP address. Please change hostname.
 		```bash
 		cd scripts/wsl
 		./update-hosts.sh
