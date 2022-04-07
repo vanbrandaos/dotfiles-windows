@@ -1,9 +1,9 @@
 
 echo 'Configurando o Git para Windows' 
 if ((Test-Path -Path "C:\Users\$env:UserName\.dotfiles\stow\git")) {
-    #Copy-Item C:\Users\$env:UserName\\stow\git\.gitconfig -Recurse C:\Users\$env:UserName\.gitconfig -Force
+    #Copy-Item C:\Users\$env:UserName\.dotfiles\stow\git\.gitconfig -Recurse C:\Users\$env:UserName\.gitconfig -Force
     
-    #New-Item -ItemType SymbolicLink -Path C:\Users\$env:UserName\dotfiles-windows\stow\git\.gitconfig -Target C:\Users\$env:UserName\.gitconfig -Force
+    #New-Item -ItemType SymbolicLink -Path C:\Users\$env:UserName\.dotfiles\stow\git\.gitconfig -Target C:\Users\$env:UserName\.gitconfig -Force
 }
 
 if ((Test-Path -Path "C:\Users\$env:UserName\.dotfiles\stow\ssh\.ssh")) {

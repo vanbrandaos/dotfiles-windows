@@ -1,0 +1,9 @@
+[user]
+	email = vanbrandaos@gmail.com
+	name = Vanessa Brandao
+
+[alias]
+	l = log --relative-date --graph --abbrev-commit -10
+
+[format]
+	pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
