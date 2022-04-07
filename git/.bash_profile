@@ -4,3 +4,6 @@ if [ -f ~/.bashrc ]; then
    . ~/.bashrc
 fi
 
+#Starship
+eval "$(starship init bash)" 
+
