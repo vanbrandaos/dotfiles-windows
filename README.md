@@ -1,18 +1,19 @@
 
+
 # Setup Windows
 
 Those are my personal settings for my Windows' environments. Here I have a bit of PowerShell files for Windows, including common application installation through Chocolatey, and developer-minded Windows configuration defaults.
 
-About PowerShell:
+Using PowerShell:
 
 >PowerShell works with a scripts Execution Policy. By default this value is Restricted. 
 
-**Run as Administrator*
 **Set Execution Policy using:*
  - Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope currentUser
   (**Once you close, it will default back to the original execution policy*)
 -  powershell -executionpolicy bypass -File .\install.ps1
 
+**To execute any command to change execution policy, you must have administrator permission, so open PowerShell command prompt with Run as administrator**
 
 1. Install [Chocolatey](https://chocolatey.org/install) (*run powershell as administrator*) 
 ```bash
@@ -40,7 +41,9 @@ About PowerShell:
 ```bash
     choco install ChocolateyGUI
 ```
-5. Create a new SSH key
+# Git
+
+1. Create a new SSH key
 ```bash
     cd git
     powershell -executionpolicy bypass -File .\configure-ssh.ps1
@@ -102,7 +105,7 @@ About PowerShell:
 
 	- Custom domain:
 
-		 access the WSL2 VM from the Windows host, see update-host.sh (In this[.dotfiles](https://github.com/vanbrandaos/.dotfiles)). This script, when called, updates your Windows hosts file with the WSL2 VM's IP address. Please change hostname.
+		 access the WSL2 VM from the Windows host, see update-host.sh (this shell belongs a [.dotfiles](https://github.com/vanbrandaos/.dotfiles) for linux). This script, when called, updates your Windows hosts file with the WSL2 VM's IP address. Please change hostname.
 		```bash
 		cd scripts/wsl
 		./update-hosts.sh
@@ -112,11 +115,12 @@ About PowerShell:
 		*Find another solutions, like [Go-WSL2-Host](https://github.com/shayne/go-wsl2-host).*
 
 	- Localhost:
-
+		```
 		Turn off fast startup
 		In WSL2, /etc/hosts lists 'localhost' as '127.0.0.1'
 		In Windows (build 19041) 'localhost' resolves to ::1
 		So the server in WSL was listening on 127.0.0.1 and the browser was trying to reach ::1
+		```
 
 		**Microsoft already provides a solution to access your Linux services on Windows configuring [networking] tag on wsl.conf archive.* 
 		**Other machines on your local network will not see the WSL network services unless you do some port forwarding (and firewall rules)*
@@ -124,14 +128,14 @@ About PowerShell:
   
 # ArchWSL:
 
-1. Download and install from [repository](https://github.com/yuk7/ArchWSL) (or use install-arch.ps1)
+1. Download and install from [github](https://github.com/yuk7/ArchWSL) (or use install-arch.ps1)
 ```bash
     cd wsl
     powershell -executionpolicy bypass -File ./install-arch.ps1    
 ```
 2. [Setup ArchWSL for user and keyrings](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/) 
 3. Follow the [previous tutorial](https://github.com/vanbrandaos/.dotfiles)
-4. Install find-the-command from [.dotfiles](https://github.com/vanbrandaos/.dotfiles) package and set fish as default shell
+4. Install find-the-command and set fish as default shell (This sh belongs a [.dotfiles](https://github.com/vanbrandaos/.dotfiles) for Linux)
 ```bash
     cd scripts/wsl
     ./setup-fish.sh
