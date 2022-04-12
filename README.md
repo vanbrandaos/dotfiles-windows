@@ -62,7 +62,7 @@ Using PowerShell:
     cd git
     powershell -executionpolicy bypass -File .\configure-ssh.ps1
 ```
-2. Import bash profile (Bash with Windows Terminal)
+2. Import .bash files (Bash with Windows Terminal)
 ```bash
     cd git
     powershell -executionpolicy bypass -File .\setup-bash.ps1
@@ -138,7 +138,7 @@ Using PowerShell:
 
 		**Microsoft already provides a solution to access your Linux services on Windows configuring [networking] tag on wsl.conf archive.* 
 		**Other machines on your local network will not see the WSL network services unless you do some port forwarding (and firewall rules)*
-3. Launch GUI applications: Only works in W11. For W10, try VcXsrv Windows X Server. 
+3. Launch GUI applications: Only works in W11. For W10, try [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/). 
   
 # ArchWSL:
 
