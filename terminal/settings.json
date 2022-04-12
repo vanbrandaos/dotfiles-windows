@@ -1,4 +1,5 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
@@ -246,37 +247,20 @@
             }
         },
         {
+            "command": "openNewTabDropdown"
+        },
+        {
             "command": 
             {
                 "action": "splitPane",
-                "split": "horizontal"
+                "split": "down"
             }
         },
         {
             "command": 
             {
-                "action": "newTab"
-            },
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "ctrl+shift+left"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane"
-            },
-            "keys": "ctrl+shift+enter"
+                "action": "newWindow"
+            }
         },
         {
             "command": 
@@ -289,8 +273,35 @@
         {
             "command": 
             {
-                "action": "newWindow"
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "ctrl+shift+left"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab"
+            },
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
             }
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane"
+            },
+            "keys": "ctrl+shift+enter"
         },
         {
             "command": "find"
@@ -303,6 +314,13 @@
                 "splitMode": "duplicate"
             },
             "keys": "ctrl+shift+d"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 4294967295
+            }
         },
         {
             "command": 
@@ -321,22 +339,8 @@
         {
             "command": 
             {
-                "action": "switchToTab",
-                "index": 4294967295
-            }
-        },
-        {
-            "command": 
-            {
                 "action": "newTab",
                 "index": 3
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "vertical"
             }
         },
         {
@@ -369,9 +373,6 @@
                 "action": "closeTab"
             },
             "keys": "ctrl+shift+q"
-        },
-        {
-            "command": "openNewTabDropdown"
         },
         {
             "command": "toggleSplitOrientation",
@@ -471,19 +472,17 @@
     {
         "defaults": 
         {
-            "acrylicOpacity": 0.84999999999999998,
+            "opacity": 85,
             "useAcrylic": true
         },
         "list": 
         [
             {
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": true,
                 "name": "Prompt de comando"
@@ -511,7 +510,7 @@
                 "commandline": "\"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i",
                 "guid": "{555a4440-d95c-4778-a74e-098b640e662a}",
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash",
+                "name": "WinBash",
                 "startingDirectory": "%USERPROFILE%"
             }
         ]
