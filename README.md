@@ -101,7 +101,7 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
 
 	3.2. Yes, i can do it:
 ```bash
-     cd git
+     cd bash
      powershell -executionpolicy bypass -F ./install-lsd.ps1
 ```
 **Need some Nerd font. The 'Fantasque Sans Mono' font was installed (step 2 - Windows Terminal). Skip if you've already done this or [download and install](https://www.nerdfonts.com/) your favorite.*
