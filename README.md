@@ -195,3 +195,6 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
     cd scripts/wsl
     ./setup-fish.sh
 ```
+#
+	
+![windows terminal](terminal/img/screenshot.png)
