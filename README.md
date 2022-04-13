@@ -92,7 +92,7 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
 ```
 2. Import .bash files (Bash with Windows Terminal)
 ```bash
-    cd git
+    cd bash
     powershell -executionpolicy bypass -File .\setup-bash.ps1
 ```
 3. Replace 'ls' command ([LSDeluxe](https://github.com/Peltoche/lsd#installation)):
