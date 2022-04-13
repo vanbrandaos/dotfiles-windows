@@ -1,6 +1,7 @@
 
 
 
+
 # Setup Windows
 
 Those are my personal settings for my Windows' environments. Here I have a bit of PowerShell files for Windows, including common application installation through Chocolatey, and developer-minded Windows configuration defaults.
@@ -36,6 +37,8 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
     Set-ExecutionPolicy RemoteSigned -scope CurrentUser
     Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 ```
+*Read [Scoop Wiki](https://github.com/ScoopInstaller/Scoop/wiki)*
+
 2. Close PowerShell and reopen as Administrator
 
 3. Install [Chocolatey](https://chocolatey.org/install) 
@@ -65,6 +68,7 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
 ```bash
     choco install ChocolateyGUI
 ```
+
 # Windows Terminal
 
 1. If you didn't install it, install Windows Terminal (option 5) or skip
@@ -77,8 +81,9 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
     cd terminal
     powershell -executionpolicy bypass -File ./setup-windows-terminal.ps1
 ```
+*Note: The custom settings bring up profiles that may not exist, such as WSL Arch (see below). You may need to change Terminal Profiles later. *
 
-# Git
+# Git (and Git Bash)
 
 1. Create a new SSH key
 ```bash
@@ -90,6 +95,18 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
     cd git
     powershell -executionpolicy bypass -File .\setup-bash.ps1
 ```
+3. Replace 'ls' command (LSDeluxe):
+	
+
+
+	3.1  ~~First, the best way to install lsd was using 'scoop install lsd', but at moment (April 2022) scoop install 0.21.0 and Git bash cant handle the 256 color scheme thats introduced in lsd version 0.21. We need [download and install](https://github.com/Peltoche/lsd/releases) lsd 0.20, extract and update $PATH with new lsd path (suggestion: ~/lsd). Open ~/.bashrc and update ls alias (lsd -la)~~. Create a 
+
+	3.2. Yes, i can do it:
+```bash
+     cd git
+     powershell -executionpolicy bypass -F ./install-lsd.ps1
+```
+
 
 # Code
 
