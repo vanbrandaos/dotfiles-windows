@@ -95,9 +95,7 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
     cd git
     powershell -executionpolicy bypass -File .\setup-bash.ps1
 ```
-3. Replace 'ls' command (LSDeluxe):
-	
-
+3. Replace 'ls' command ([LSDeluxe](https://github.com/Peltoche/lsd#installation)):
 
 	3.1  ~~First, the best way to install lsd was using 'scoop install lsd', but at moment (April 2022) scoop install 0.21.0 and Git bash cant handle the 256 color scheme thats introduced in lsd version 0.21. We need [download and install](https://github.com/Peltoche/lsd/releases) lsd 0.20, extract and update $PATH with new lsd path (suggestion: ~/lsd). Open ~/.bashrc and update ls alias (lsd -la)~~. Create a 
 
@@ -106,6 +104,7 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
      cd git
      powershell -executionpolicy bypass -F ./install-lsd.ps1
 ```
+**Need some Nerd font. The 'Fantasque Sans Mono' font was installed (step 2 - Windows Terminal). Skip if you've already done this or [download and install](https://www.nerdfonts.com/) your favorite.*
 
 
 # Code
