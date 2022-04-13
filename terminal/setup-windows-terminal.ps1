@@ -1,4 +1,4 @@
-echo '### ATENCAO: Ao final do script instale as fontes "FantasqueSansMono Nerd Font" na janela do explorer que abrirA.'
+echo '### ATENCAO: Install fonts "FantasqueSansMono Nerd Font" in the explorer window that will open'
 echo '---------'
 echo '---------'
 
@@ -15,7 +15,7 @@ function Add-Symlink {
     New-Item -ItemType SymbolicLink -Path $from -Target $to -Force
 }
 
-echo 'Tentando criar link simbólico para a configuração do Windows Terminal...' 
+echo 'Trying create a symbolic link for Windows Terminal...' 
 $StorePackages = "C:\Users\$env:UserName\AppData\Local\Packages\*Microsoft.WindowsTerminal*"
 $WindowsTerminalDir = Get-ChildItem $StorePackages -ErrorAction SilentlyContinue
 if ($WindowsTerminalDir) {
@@ -29,29 +29,28 @@ if ($WindowsTerminalDir) {
         #Set-Location -Path "C:\wsl\fonts"        
     }
 
-    echo 'Configurando starship...'    
+    echo 'Configuring starship...'    
     New-Item -Path C:\Users\$env:UserName\.config -ItemType Directory -Force
     New-Item -Path C:\Users\$env:UserName\.config\starship.toml -ItemType File -Force
     Add-Symlink "C:\Users\$env:UserName\.config\starship.toml" "C:\Users\$env:UserName\dotfiles-windows\terminal\starship.toml" > $null
 
-    echo 'Fazendo download das fontes necessárias...'    
+    echo 'downloading fonts...'    
     Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FantasqueSansMono.zip" -OutFile "C:\wsl\fonts\FantasqueSansMono.zip"        
     echo 'Extraindo fonte...'    
     Expand-Archive "C:\wsl\fonts\FantasqueSansMono.zip" -DestinationPath "C:\wsl\fonts\FantasqueSansMono"
     Remove-Item "C:\wsl\fonts\FantasqueSansMono.zip"
     start "C:\wsl\fonts\FantasqueSansMono"
 
-    echo '### Concluído'
-    echo 'Instale as fontes 'Fantasque Sans Mono Regular Nerd Font Complete.ttf',  e reinicie o terminal'
+    echo '### Done'
+    echo 'Install 'Fantasque Sans Mono Regular Nerd Font Complete.ttf' fonts and restart Windows Terminal'
 
 
 } else {
-    echo "Ocorreu um erro. Verifique se o windows terminal está instalado."
+    echo "An error has occurred. Please verify windows terminal instalation."
 }
 
 #if ((Test-Path -Path "C:\Users\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState")) {
-#    echo 'Configurando o Windows Terminal com arquivo settings.xml'    
-#    echo 'Enviando settings.json para pasta de configuracao WT...' 
+#    echo 'Copying settings.json'    
     #Copy-Item "C:\Users\$env:UserName\dotfiles-windows\terminal\settings.json" -Destination "C:\Users\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 
 #    if (!(Test-Path -Path "C:\wsl\fonts")) {

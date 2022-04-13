@@ -5,16 +5,31 @@
 
 Those are my personal settings for my Windows' environments. Here I have a bit of PowerShell files for Windows, including common application installation through Chocolatey, and developer-minded Windows configuration defaults.
 
-Using PowerShell:
+# Desired Features:
 
->PowerShell works with a scripts Execution Policy. By default this value is Restricted. 
+- Chocolatey
+- Packages list (wsl, dev, utils) installed via chocolatey
+- Windows Terminal (custom settings.json)
+- Git (SSH keys and aliases)
+- Code (and Java/JavaScript extensions)
+- WSL (using ArchWSL)
 
-**Set Execution Policy using:*
- - Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope currentUser
-  (**Once you close, it will default back to the original execution policy*)
--  powershell -executionpolicy bypass -File .\install.ps1
+# :warning: Using PowerShell:
+
+PowerShell scripts are easy to use but there are a couple of things to be aware of, especially when it is the first time you use such scripts. 
+
+>The PowerShell Execution Policy determines whether PowerShell scripts are allowed to run. By default, the Execution Policy is set to Restricted.
+
+**To change the execution policy (on powershell terminal):*
+ 1. Use 'Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope currentUser' before executing your scripts (**Once you close, it will default back to the original execution policy*)
+ 2. Use 'powershell -executionpolicy bypass -File .\install.ps1' using execution policy as parameter to run all scripts 
 
 **To execute any command to change execution policy, you must have administrator permission, open PowerShell command prompt with Run as administrator**
+
+See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2) for detailed information.
+
+
+# Initial Settings
 
 1. Install [Chocolatey](https://chocolatey.org/install) (*run powershell as administrator*) 
 ```bash
@@ -37,14 +52,14 @@ Using PowerShell:
     cd chocolatey
     powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1   
 ```
-*Use choco like pacman! (choco install program | choco remove program | choco search program).*
+*Use choco like pacman/apt get using these [commands](https://docs.chocolatey.org/en-us/choco/commands/)!* <br />
 *Yes! They have a GUI and you can install Chocolatey GUI via Chocolatey itself by executing:*
 ```bash
     choco install ChocolateyGUI
 ```
 # Windows Terminal
 
-1. Install Windows Terminal (option 5)
+1. If you didn't install it, install Windows Terminal (option 5) or skip
 ```bash
     cd chocolatey
     powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1
@@ -140,7 +155,9 @@ Using PowerShell:
 		**Other machines on your local network will not see the WSL network services unless you do some port forwarding (and firewall rules)*
 3. Launch GUI applications: Only works in W11. For W10, try [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/). 
   
-# ArchWSL:
+# WSL Distro: ArchWSL
+
+**If you prefer, search in Microsoft Store for other distros*
 
 1. Download and install from [github](https://github.com/yuk7/ArchWSL) (or use install-arch.ps1)
 ```bash
@@ -148,8 +165,8 @@ Using PowerShell:
     powershell -executionpolicy bypass -File ./install-arch.ps1    
 ```
 2. [Setup ArchWSL for user and keyrings](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/) 
-3. Follow the [previous tutorial](https://github.com/vanbrandaos/.dotfiles)
-4. Install find-the-command and set fish as default shell (This sh belongs a [.dotfiles](https://github.com/vanbrandaos/.dotfiles) for Linux)
+3. See Arch [.dotfiles](https://github.com/vanbrandaos/.dotfiles)
+4. Install find-the-command and set fish as default shell (This sh belongs a [.dotfiles](https://github.com/vanbrandaos/.dotfiles))
 ```bash
     cd scripts/wsl
     ./setup-fish.sh
