@@ -7,7 +7,7 @@ Those are my personal settings for my Windows' environments. Here I have a bit o
 
 # Desired Features:
 
-- Chocolatey
+- Scoop and Chocolatey
 - Packages list (wsl, dev, utils) installed via chocolatey
 - Windows Terminal (custom settings.json)
 - Git (SSH keys and aliases)
@@ -31,23 +31,31 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
 
 # Initial Settings
 
-1. Install [Chocolatey](https://chocolatey.org/install) (*run powershell as administrator*) 
+1. Install [Scoop](https://scoop.sh/) (**Running the scoop installer as administrator is disabled by default, run powershell with user privileges**)
+```bash
+    Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+    Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+```
+2. Close PowerShell and reopen as Administrator
+
+3. Install [Chocolatey](https://chocolatey.org/install) 
 ```bash
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
-2. Install git and update $PATH
+
+4. Install git and update $PATH
 ```bash
     choco install git -y      
     $PathTemp = [Environment]::GetEnvironmentVariable('Path', 'User') + ';'
     $PathTemp += 'C:\Program Files\Git\bin'
     [Environment]::SetEnvironmentVariable('Path', $PathTemp, 'User')  
 ```
-3. Ready to use git clone! 
+5. Ready to use git clone! 
 ```bash
     cd ~
     git clone https://github.com/vanbrandaos/dotfiles-windows.git
 ```
-4. Install packages:
+6. Install packages:
 ```bash
     cd chocolatey
     powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1   
