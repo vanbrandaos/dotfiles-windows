@@ -45,7 +45,10 @@ $PathTemp += "C:\Users\$env:UserName\lsd"
 [Environment]::SetEnvironmentVariable('Path', $PathTemp, 'User')
 
 echo "Updating ~/.bashrc alias for ls..."
-$bashrc = (Get-Content -path "C:\Users\$env:UserName\dotfiles-windows\git\.bashrc" -Raw) -replace 'ls -al --color=auto',"lsd -la --blocks permission --blocks size --blocks user --blocks date --date '+%d %b %y %X' --blocks name" | Set-Content -Path "C:\Users\$env:UserName\dotfiles-windows\git\.bashrc"
+$newLS = "lsd -la --blocks permission --blocks size --blocks user --blocks date --date '+%d %b %y %X' --blocks name"
+#$bashrc = (Get-Content -path "C:\Users\$env:UserName\dotfiles-windows\git\.bashrc" -Raw) -replace 'ls -al --color=auto',"lsd -la --blocks permission --blocks size --blocks user --blocks date --date '+%d %b %y %X' --blocks name" | Set-Content -Path "C:\Users\$env:UserName\dotfiles-windows\git\.bashrc"
+
+$bashrc = (Get-Content -path "C:\Users\$env:UserName\dotfiles-windows\bash\.bashrc" -Raw) -replace 'ls -al --color=auto', $newLS | Set-Content -Path "C:\Users\$env:UserName\dotfiles-windows\bash\.bashrc"
 
 #echo "Symlink for ~/.config/lsd/config.yaml"
 #Add-Symlink "C:\Users\$env:UserName\.config\lsd\config.yaml" "C:\Users\$env:UserName\dotfiles-windows\git\config.yaml" > $null

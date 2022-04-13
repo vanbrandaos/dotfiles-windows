@@ -11,6 +11,6 @@ function Add-Symlink {
 }
 
 Write-Output ".bashrc/ .bash_profile symbolic Link"
-Add-Symlink "C:\Users\$env:UserName\.bashrc" "C:\Users\$env:UserName\dotfiles-windows\git\.bashrc" > $null
-Add-Symlink "C:\Users\$env:UserName\.bash_profile" "C:\Users\$env:UserName\dotfiles-windows\git\.bash_profile" > $null
+Add-Symlink "C:\Users\$env:UserName\.bashrc" "C:\Users\$env:UserName\dotfiles-windows\bash\.bashrc" > $null
+Add-Symlink "C:\Users\$env:UserName\.bash_profile" "C:\Users\$env:UserName\dotfiles-windows\bash\.bash_profile" > $null
 Write-Output "Done"
