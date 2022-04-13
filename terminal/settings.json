@@ -4,6 +4,21 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "down"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
             "command": "unbound",
             "keys": "ctrl+tab"
         },
@@ -234,33 +249,10 @@
         {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
+                "action": "moveFocus",
+                "direction": "left"
             },
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": 
-            {
-                "action": "swapPane",
-                "direction": "down"
-            }
-        },
-        {
-            "command": "openNewTabDropdown"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "newWindow"
-            }
+            "keys": "ctrl+shift+left"
         },
         {
             "command": 
@@ -273,10 +265,18 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "ctrl+shift+left"
+                "action": "newWindow"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            }
+        },
+        {
+            "command": "openNewTabDropdown"
         },
         {
             "command": "paste",
@@ -508,6 +508,10 @@
             },
             {
                 "commandline": "\"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i",
+                "font": 
+                {
+                    "face": "FantasqueSansMono Nerd Font"
+                },
                 "guid": "{555a4440-d95c-4778-a74e-098b640e662a}",
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "WinBash",

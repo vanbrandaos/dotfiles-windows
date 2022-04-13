@@ -1,4 +1,4 @@
-alias ls='ls -al -F --color=auto --show-control-chars'
+alias ls='ls -al --color=auto'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -16,3 +16,5 @@ alias gdf='git diff'
 alias glgp='git log -p'
 alias glg='git log'
 alias gps='git push'
+
+

@@ -44,6 +44,7 @@ if ($WindowsTerminalDir) {
     echo '### Done'
     echo 'Install 'Fantasque Sans Mono Regular Nerd Font Complete.ttf' fonts and restart Windows Terminal'
 
+    #scoop install lsd
 
 } else {
     echo "An error has occurred. Please verify windows terminal instalation."
