@@ -10,6 +10,7 @@ Usually as Linux host (with WSL), on Windows I just keep initial configs, that i
 
 # Desired Features:
 
+- Custom Windows Start Menu
 - Scoop and Chocolatey
 - Packages list (wsl, dev, utils) installed via chocolatey
 - Windows Terminal (custom settings.json)
@@ -31,6 +32,16 @@ PowerShell scripts are easy to use but there are a couple of things to be aware 
 
 See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2) for detailed information.
 
+# Start Menu
+
+To export, use export-config.ps1 and create a StartMenuLayout.xml.
+```bash
+    cd start-menu
+    powershell -executionpolicy bypass -File .\export-config.ps1
+```
+To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > Administrative Template > Start Menu and Taskbar
+
+**Need active Group Policy Editor. On Windows Home, this funcionability has inactive by default.* 
 
 # Initial Settings
 
