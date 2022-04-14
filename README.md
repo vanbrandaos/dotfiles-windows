@@ -4,7 +4,9 @@
 
 # Setup Windows
 
-Those are my personal settings for my Windows' environments. Here I have a bit of PowerShell files for Windows, including common application installation through Chocolatey, and developer-minded Windows configuration defaults.
+Those are my personal settings for Windows' environments. Here I have a bit of PowerShell files, including common application installation through Chocolatey, and developer-minded Windows configuration defaults.
+
+Usually as Linux host (with WSL), on Windows I just keep initial configs, that includes Git, Bash, Java e some IDE's. 
 
 # Desired Features:
 
