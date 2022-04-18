@@ -6,12 +6,12 @@
 
 Those are my personal settings for Windows' environments. Here I have a bit of PowerShell files, including common application installation through Chocolatey, and developer-minded Windows configuration defaults.
 
-Usually as Linux host (with WSL), on Windows I just keep initial configs, that includes Git, Bash, Java e some IDE's. 
+Usually as Linux host (with WSL), on Windows I just keep initial configs, that includes Git (Bash), Java e some IDE's. 
 
 # Desired Features:
 
 - Custom Windows Start Menu
-- Scoop and Chocolatey
+- Scoop and Chocolatey (package manager)
 - Packages list (wsl, dev, utils) installed via chocolatey
 - Windows Terminal (custom settings.json)
 - Git (SSH keys and aliases)
@@ -25,8 +25,8 @@ PowerShell scripts are easy to use but there are a couple of things to be aware 
 >The PowerShell Execution Policy determines whether PowerShell scripts are allowed to run. By default, the Execution Policy is set to Restricted.
 
 **To change the execution policy (on powershell terminal):*
- 1. Use 'Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope currentUser' before executing your scripts (**Once you close, it will default back to the original execution policy*)
- 2. Use 'powershell -executionpolicy bypass -File .\install.ps1' using execution policy as parameter to run all scripts 
+ 1. 'Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope currentUser' before executing your scripts (**Once you close, it will default back to the original execution policy*)
+ 2. 'powershell -executionpolicy bypass -File .\install.ps1' using execution policy as parameter to run all scripts 
 
 **To execute any command to change execution policy, you must have administrator permission, open PowerShell command prompt with Run as administrator**
 
@@ -58,6 +58,9 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```bash
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
+NOTE: Windows 11 comes with WinGet by default which makes it officially Microsoft's open source package manager going forward.
+Right now using Chocolatey is better as it has more packages and is just easier to use. Scoop is especially focused on the handling of development environment building software such as programmers. Also, WinGet is not a package manager in the traditional sense as it only installs software in the formats - MSI, MSIX and some EXE. 
+
 
 4. Install git and update $PATH
 ```bash
@@ -110,7 +113,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```
 3. Replace 'ls' command ([LSDeluxe](https://github.com/Peltoche/lsd#installation)):
 
-	3.1  ~~First, the best way to install lsd was using 'scoop install lsd', but at moment (April 2022) scoop install 0.21.0 and Git bash cant handle the 256 color scheme thats introduced in lsd version 0.21. We need [download and install](https://github.com/Peltoche/lsd/releases) lsd 0.20, extract and update $PATH with new lsd path (suggestion: ~/lsd). Open ~/.bashrc and update ls alias (lsd -la)~~. Create a 
+	3.1  ~~First, the best way to install lsd was using 'scoop install lsd', but at moment (April 2022) scoop install 0.21.0 and Git bash cant handle the 256 color scheme thats introduced in lsd version 0.21. We need [download and install](https://github.com/Peltoche/lsd/releases) lsd 0.20, extract and update $PATH with new lsd path (suggestion: ~/lsd). Open ~/.bashrc and update ls alias (lsd -la)~~. 
 
 	3.2. Yes, i can do it:
 ```bash
