@@ -122,6 +122,8 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```
 **Need some Nerd font. The 'Fantasque Sans Mono' font was installed (step 2 - Windows Terminal). Skip if you've already done this or [download and install](https://www.nerdfonts.com/) your favorite.*
 
+EXA is coming!
+>Very soon now. It is looking highly likely that the current version of exa (v0.10.0) will be the last without Windows support.
 
 # Code
 
