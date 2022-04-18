@@ -58,8 +58,8 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```bash
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
-NOTE: Windows 11 comes with WinGet by default which makes it officially Microsoft's open source package manager going forward.
-Right now using Chocolatey is better as it has more packages and is just easier to use. Scoop is especially focused on the handling of development environment building software such as programmers. Also, WinGet is not a package manager in the traditional sense as it only installs software in the formats - MSI, MSIX and some EXE. 
+*NOTE: Windows 11 comes with WinGet by default which makes it officially Microsoft's open source package manager going forward.*
+*Right now using Chocolatey is better as it has more packages and is just easier to use. Scoop is especially focused on the handling of development environment building software such as programmers. Also, WinGet is not a package manager in the traditional sense as it only installs software in the formats - MSI, MSIX and some EXE.*
 
 
 4. Install git and update $PATH
