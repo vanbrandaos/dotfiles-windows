@@ -20,10 +20,6 @@
         },
         {
             "command": "unbound",
-            "keys": "ctrl+tab"
-        },
-        {
-            "command": "unbound",
             "keys": "ctrl+shift+tab"
         },
         {
@@ -220,14 +216,6 @@
         },
         {
             "command": "unbound",
-            "keys": "ctrl+shift+pgdn"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+pgup"
-        },
-        {
-            "command": "unbound",
             "keys": "ctrl+shift+end"
         },
         {
@@ -245,6 +233,18 @@
         {
             "command": "unbound",
             "keys": "ctrl+shift+y"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+pgdn"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+pgup"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+f"
         },
         {
             "command": 
@@ -348,7 +348,8 @@
             {
                 "action": "moveTab",
                 "direction": "backward"
-            }
+            },
+            "keys": "ctrl+alt+pgup"
         },
         {
             "command": "duplicateTab"
@@ -372,7 +373,7 @@
             {
                 "action": "closeTab"
             },
-            "keys": "ctrl+shift+q"
+            "keys": "ctrl+shift+w"
         },
         {
             "command": "toggleSplitOrientation",
@@ -380,7 +381,7 @@
         },
         {
             "command": "closePane",
-            "keys": "ctrl+shift+w"
+            "keys": "ctrl+shift+q"
         },
         {
             "command": 
@@ -463,11 +464,37 @@
                 "target": "settingsUI"
             },
             "keys": "ctrl+alt+c"
+        },
+        {
+            "command": 
+            {
+                "action": "moveTab",
+                "direction": "forward"
+            },
+            "keys": "ctrl+alt+pgdn"
+        },
+        {
+            "command": 
+            {
+                "action": "renameWindow"
+            }
+        },
+        {
+            "command": "tabSearch",
+            "keys": "ctrl+tab"
+        },
+        {
+            "command": 
+            {
+                "action": "renameTab"
+            },
+            "keys": "ctrl+r"
         }
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{e7904b19-2c9d-4066-9cdc-1321b9dc659f}",
+    "initialCols": 200,
     "profiles": 
     {
         "defaults": 
@@ -730,5 +757,6 @@
         }
     ],
     "tabSwitcherMode": "disabled",
-    "theme": "dark"
+    "theme": "dark",
+    "useAcrylicInTabRow": true
 }

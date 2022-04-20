@@ -1,4 +1,7 @@
-alias ls="lsd -la --blocks permission --blocks size --blocks user --blocks date --date '+%d %b %y %X' --blocks name"
+alias ls="lsd -al --blocks permission --blocks size --blocks user --blocks date --date '+%d %b %y %X' --blocks name"
+alias la="lsd -A"
+alias ll="lsd -l --blocks permission --blocks size --blocks user --blocks date --date '+%d %b %y %X' --blocks name"
+alias lt='lsd --tree'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
