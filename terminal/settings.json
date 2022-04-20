@@ -758,5 +758,7 @@
     ],
     "tabSwitcherMode": "disabled",
     "theme": "dark",
-    "useAcrylicInTabRow": true
+    "useAcrylicInTabRow": true,
+    "centerOnLaunch":true,
+    "confirmCloseAllTabs":false
 }
