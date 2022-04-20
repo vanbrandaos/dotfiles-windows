@@ -101,7 +101,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 # Git (and Git Bash)
 
-1. Create a new SSH key
+1. Create a new SSH key and symbolic links
 ```bash
     cd git
     powershell -executionpolicy bypass -File .\configure-ssh.ps1
