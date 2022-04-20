@@ -104,8 +104,16 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 1. Create a new SSH key and symbolic links
 ```bash
     cd git
-    powershell -executionpolicy bypass -File .\configure-ssh.ps1
+    powershell -executionpolicy bypass -File .\create-and-configure-ssh.ps1
 ```
+**OR**
+
+- Import your SSH (and symbolic links): Needed paste your public and private key to /git.
+```bash
+    cd git
+    powershell -executionpolicy bypass -File .\import-and-configure-ssh.ps1
+```
+
 2. Import .bash files (Bash with Windows Terminal)
 ```bash
     cd bash
