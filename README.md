@@ -189,7 +189,7 @@ EXA is coming!
 		cd scripts/wsl
 		./update-hosts.sh
 		```
-		On W10, I created an alias called 'wsl-update' that did this job (and started docker). If you are on W11, add this shell in the startup operations and avoid calling it every time when booting.
+		On W10, I created an alias called 'wsld' that did this job (and started docker). If you are on W11, add this shell in the startup operations and avoid calling it every time when booting.
 
 		*Find another solutions, like [Go-WSL2-Host](https://github.com/shayne/go-wsl2-host).*
 
