@@ -271,6 +271,13 @@
         {
             "command": 
             {
+                "action": "scrollUp"
+            },
+            "keys": "ctrl+pgup"
+        },
+        {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "down"
             }
@@ -374,6 +381,13 @@
                 "action": "closeTab"
             },
             "keys": "ctrl+shift+w"
+        },
+        {
+            "command": 
+            {
+                "action": "scrollDown"
+            },
+            "keys": "ctrl+pgdn"
         },
         {
             "command": "toggleSplitOrientation",
@@ -491,10 +505,12 @@
             "keys": "ctrl+r"
         }
     ],
+    "centerOnLaunch": true,
+    "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{e7904b19-2c9d-4066-9cdc-1321b9dc659f}",
-    "initialCols": 200,
+    "initialCols": 180,
     "profiles": 
     {
         "defaults": 
@@ -758,7 +774,5 @@
     ],
     "tabSwitcherMode": "disabled",
     "theme": "dark",
-    "useAcrylicInTabRow": true,
-    "centerOnLaunch":true,
-    "confirmCloseAllTabs":false
+    "useAcrylicInTabRow": true
 }
