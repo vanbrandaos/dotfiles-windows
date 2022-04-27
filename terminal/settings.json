@@ -4,6 +4,21 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "down"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
             "command": "unbound",
             "keys": "ctrl+shift+tab"
         },
@@ -201,14 +216,6 @@
         },
         {
             "command": "unbound",
-            "keys": "ctrl+shift+end"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+home"
-        },
-        {
-            "command": "unbound",
             "keys": "ctrl+shift+comma"
         },
         {
@@ -221,53 +228,23 @@
         },
         {
             "command": "unbound",
-            "keys": "ctrl+shift+pgdn"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+pgup"
-        },
-        {
-            "command": "unbound",
             "keys": "ctrl+f"
         },
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
+            "command": "unbound",
+            "keys": "ctrl+pgdn"
         },
         {
-            "command": 
-            {
-                "action": "swapPane",
-                "direction": "down"
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "scrollUp"
-            },
+            "command": "unbound",
             "keys": "ctrl+pgup"
         },
         {
-            "command": "openNewTabDropdown"
+            "command": "unbound",
+            "keys": "ctrl+end"
         },
         {
-            "command": 
-            {
-                "action": "newWindow"
-            }
+            "command": "unbound",
+            "keys": "ctrl+home"
         },
         {
             "command": 
@@ -280,10 +257,33 @@
         {
             "command": 
             {
+                "action": "newWindow"
+            }
+        },
+        {
+            "command": 
+            {
                 "action": "moveFocus",
                 "direction": "left"
             },
             "keys": "ctrl+shift+left"
+        },
+        {
+            "command": "openNewTabDropdown"
+        },
+        {
+            "command": 
+            {
+                "action": "scrollUp"
+            },
+            "keys": "ctrl+shift+pgup"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            }
         },
         {
             "command": "paste",
@@ -387,7 +387,7 @@
             {
                 "action": "scrollDown"
             },
-            "keys": "ctrl+pgdn"
+            "keys": "ctrl+shift+pgdn"
         },
         {
             "command": "toggleSplitOrientation",
@@ -506,11 +506,11 @@
         },
         {
             "command": "scrollToTop",
-            "keys": "ctrl+home"
+            "keys": "ctrl+shift+home"
         },
         {
             "command": "scrollToBottom",
-            "keys": "ctrl+end"
+            "keys": "ctrl+shift+end"
         }
     ],
     "centerOnLaunch": true,
