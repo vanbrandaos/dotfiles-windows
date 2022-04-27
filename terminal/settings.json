@@ -4,21 +4,6 @@
     "actions": 
     [
         {
-            "command": 
-            {
-                "action": "swapPane",
-                "direction": "down"
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
-        },
-        {
             "command": "unbound",
             "keys": "ctrl+shift+tab"
         },
@@ -249,10 +234,40 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "left"
+                "action": "copy",
+                "singleLine": false
             },
-            "keys": "ctrl+shift+left"
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "down"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "scrollUp"
+            },
+            "keys": "ctrl+pgup"
+        },
+        {
+            "command": "openNewTabDropdown"
+        },
+        {
+            "command": 
+            {
+                "action": "newWindow"
+            }
         },
         {
             "command": 
@@ -265,25 +280,10 @@
         {
             "command": 
             {
-                "action": "newWindow"
-            }
-        },
-        {
-            "command": 
-            {
-                "action": "scrollUp"
+                "action": "moveFocus",
+                "direction": "left"
             },
-            "keys": "ctrl+pgup"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down"
-            }
-        },
-        {
-            "command": "openNewTabDropdown"
+            "keys": "ctrl+shift+left"
         },
         {
             "command": "paste",
@@ -503,6 +503,14 @@
                 "action": "renameTab"
             },
             "keys": "ctrl+r"
+        },
+        {
+            "command": "scrollToTop",
+            "keys": "ctrl+home"
+        },
+        {
+            "command": "scrollToBottom",
+            "keys": "ctrl+end"
         }
     ],
     "centerOnLaunch": true,
