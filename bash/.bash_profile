@@ -7,3 +7,4 @@ fi
 #Starship
 eval "$(starship init bash)" 
 
+source ~/bash_completion.d/git

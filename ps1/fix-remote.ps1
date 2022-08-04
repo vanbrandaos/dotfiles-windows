@@ -1,0 +1,1 @@
+git remote set-url origin git@github.com:vanbrandaos/dotfiles-windows.git

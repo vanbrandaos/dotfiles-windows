@@ -36,8 +36,7 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
 
 To export, use export-config.ps1 and create a StartMenuLayout.xml.
 ```bash
-    cd start-menu
-    powershell -executionpolicy bypass -File .\export-config.ps1
+	powershell -executionpolicy bypass -File .\ps1\export-start-layout-config.ps1
 ```
 To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > Administrative Template > Start Menu and Taskbar
 
@@ -76,8 +75,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```
 6. Install packages:
 ```bash
-    cd chocolatey
-    powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1   
+	powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1
 ```
 *Use choco like pacman/apt get using these [commands](https://docs.chocolatey.org/en-us/choco/commands/)!* <br />
 *Yes! They have a GUI and you can install Chocolatey GUI via Chocolatey itself by executing:*
@@ -89,13 +87,11 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 1. If you didn't install it, install Windows Terminal (option 5) or skip
 ```bash
-    cd chocolatey
-    powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1
+	powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1
 ```
 2. Import settings.json (themes, shortcuts profiles, etc), starship and install nerd-fonts
 ```bash
-    cd terminal
-    powershell -executionpolicy bypass -File ./setup-windows-terminal.ps1
+    powershell -executionpolicy bypass -File .\ps1\setup-windows-terminal.ps1
 ```
 *Note: The custom settings bring up profiles that may not exist, such as WSL Arch (see below). You may need to change Terminal Profiles later. *
 
@@ -103,21 +99,18 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 1. Create a new SSH key and symbolic links
 ```bash
-    cd git
-    powershell -executionpolicy bypass -File .\create-and-configure-ssh.ps1
+	powershell -executionpolicy bypass -File .\ps1\create-and-configure-ssh.ps1
 ```
 **OR**
 
 - Import your SSH (and symbolic links): Needed paste your public and private key to /git.
 ```bash
-    cd git
-    powershell -executionpolicy bypass -File .\import-and-configure-ssh.ps1
+    powershell -executionpolicy bypass -File .\ps1\import-and-configure-ssh.ps1
 ```
 
 2. Import .bash files (Bash with Windows Terminal)
 ```bash
-    cd bash
-    powershell -executionpolicy bypass -File .\setup-bash.ps1
+    powershell -executionpolicy bypass -File .\ps1\setup-bash.ps1
 ```
 3. Replace 'ls' command ([LSDeluxe](https://github.com/Peltoche/lsd#installation)):
 
@@ -125,8 +118,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 	3.2. Yes, i can do it:
 ```bash
-     cd bash
-     powershell -executionpolicy bypass -F ./install-lsd.ps1
+    powershell -executionpolicy bypass -File .\ps1\install-lsd.ps1
 ```
 **Need some Nerd font. The 'Fantasque Sans Mono' font was installed (step 2 - Windows Terminal). Skip if you've already done this or [download and install](https://www.nerdfonts.com/) your favorite.*
 
@@ -137,9 +129,8 @@ EXA is coming!
 
 1. Install extensions
 ```bash
-    cd vscode
-    powershell -executionpolicy bypass -File .\install-extensions.ps1
-    powershell -executionpolicy bypass -File .\install-java-extensions.ps1
+	powershell -executionpolicy bypass -File .\ps1\install-extensions.ps1
+	powershell -executionpolicy bypass -File .\ps1\install-java-extensions.ps1
 ```
 
 # Setup WSL2 :
@@ -211,8 +202,7 @@ EXA is coming!
 
 1. Download and install from [github](https://github.com/yuk7/ArchWSL) (or use install-arch.ps1)
 ```bash
-    cd wsl
-    powershell -executionpolicy bypass -File ./install-arch.ps1    
+    powershell -executionpolicy bypass -File .\ps1\install-arch.ps1
 ```
 2. Reset Terminal, go to Arch folder (C:/wsl/Arch) and [Setup ArchWSL for user and keyrings](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/) 
 3. See Arch [.dotfiles](https://github.com/vanbrandaos/.dotfiles)

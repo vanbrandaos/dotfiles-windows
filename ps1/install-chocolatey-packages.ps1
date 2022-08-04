@@ -18,12 +18,12 @@ $packageName = ""
 if (1 -eq $package){
   echo " "
   echo "Installing Utils"
-  $packageName = "../chocolatey/packages-utils.txt"
+  $packageName = "./chocolatey/packages-utils.txt"
 } elseif (2 -eq $package){
   echo " "
   echo "****Package Utils:"
   echo " "
-  Get-Content "../chocolatey/packages-utils.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
+  Get-Content "./chocolatey/packages-utils.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
   echo " "
   echo "****Package Utils****"
   echo " "
@@ -31,12 +31,12 @@ if (1 -eq $package){
 } elseif (3 -eq $package){
   echo " "
   echo "Installing WSL"
-  $packageName = "../chocolatey/packages-wsl.txt"
+  $packageName = "./chocolatey/packages-wsl.txt"
 } elseif (4 -eq $package){
   echo " "
   echo "****Package WSL****"  
   echo " "
-  Get-Content "../chocolatey/packages-wsl.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
+  Get-Content "./chocolatey/packages-wsl.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
   echo " "
   echo "****Package WSL****"
   echo " "
@@ -44,12 +44,12 @@ if (1 -eq $package){
 } elseif (5 -eq $package){
   echo " "
   echo "Installing Dev"
-  $packageName = "../chocolatey/packages-dev.txt"
+  $packageName = "./chocolatey/packages-dev.txt"
 } elseif (6 -eq $package){
   echo " "
   echo "****Package Dev****"
   echo " "
-  Get-Content "../chocolatey/packages-dev.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
+  Get-Content "./chocolatey/packages-dev.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
   echo " "
   echo "****Package Dev****"
   echo " "
