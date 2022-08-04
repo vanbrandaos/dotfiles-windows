@@ -69,7 +69,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
     $PathTemp += 'C:\Program Files\Git\bin'
     [Environment]::SetEnvironmentVariable('Path', $PathTemp, 'User')  
 ```
-5. Ready to use git clone! Run Git Bash as administrator
+5. Ready to use git clone!
 ```bash
     cd ~
     git clone https://github.com/vanbrandaos/dotfiles-windows.git
