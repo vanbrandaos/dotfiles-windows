@@ -18,42 +18,42 @@ $packageName = ""
 if (1 -eq $package){
   echo " "
   echo "Installing Utils"
-  $packageName = "./packages-utils.txt"
+  $packageName = "../chocolatey/packages-utils.txt"
 } elseif (2 -eq $package){
   echo " "
   echo "****Package Utils:"
   echo " "
-  Get-Content "./packages-utils.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
+  Get-Content "../chocolatey/packages-utils.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
   echo " "
   echo "****Package Utils****"
   echo " "
-  powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1    
+  powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1    
 } elseif (3 -eq $package){
   echo " "
   echo "Installing WSL"
-  $packageName = "./packages-wsl.txt"
+  $packageName = "../chocolatey/packages-wsl.txt"
 } elseif (4 -eq $package){
   echo " "
   echo "****Package WSL****"  
   echo " "
-  Get-Content "./packages-wsl.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
+  Get-Content "../chocolatey/packages-wsl.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
   echo " "
   echo "****Package WSL****"
   echo " "
-  powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1
+  powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1    
 } elseif (5 -eq $package){
   echo " "
   echo "Installing Dev"
-  $packageName = "./packages-dev.txt"
+  $packageName = "../chocolatey/packages-dev.txt"
 } elseif (6 -eq $package){
   echo " "
   echo "****Package Dev****"
   echo " "
-  Get-Content "./packages-dev.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
+  Get-Content "../chocolatey/packages-dev.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{echo $_ }
   echo " "
   echo "****Package Dev****"
   echo " "
-  powershell -executionpolicy bypass -File .\install-chocolatey-packages.ps1 
+  powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1    
 }else {
   echo "invalid option. Skiping..."
   exit

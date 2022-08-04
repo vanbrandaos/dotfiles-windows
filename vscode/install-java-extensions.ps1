@@ -1,1 +1,0 @@
-Get-Content "./code-java-extensions.txt" | ForEach-Object{($_ -split "\r\n")[0]} | ForEach-Object{code --install-extension $_ --force}
