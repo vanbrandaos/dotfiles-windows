@@ -218,8 +218,7 @@ EXA is coming!
 3. See Arch [.dotfiles](https://github.com/vanbrandaos/.dotfiles)
 4. Install find-the-command and set fish as default shell (This sh belongs a [.dotfiles](https://github.com/vanbrandaos/.dotfiles))
 ```bash
-    cd scripts/wsl
-    ./setup-fish.sh
+    ./scripts/wsl/setup-fish.sh
 ```
 #
 	
