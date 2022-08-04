@@ -36,7 +36,7 @@ See Microsoft's Docs [About Execution Policies](https://docs.microsoft.com/en-us
 
 To export, use export-config.ps1 and create a StartMenuLayout.xml.
 ```bash
-	powershell -executionpolicy bypass -File .\ps1\export-start-layout-config.ps1
+    powershell -executionpolicy bypass -File .\ps1\export-start-layout-config.ps1
 ```
 To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > Administrative Template > Start Menu and Taskbar
 
@@ -75,7 +75,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```
 6. Install packages:
 ```bash
-	powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1
+    powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1
 ```
 *Use choco like pacman/apt get using these [commands](https://docs.chocolatey.org/en-us/choco/commands/)!* <br />
 *Yes! They have a GUI and you can install Chocolatey GUI via Chocolatey itself by executing:*
@@ -87,7 +87,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 1. If you didn't install it, install Windows Terminal (option 5) or skip
 ```bash
-	powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1
+    powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1
 ```
 2. Import settings.json (themes, shortcuts profiles, etc), starship and install nerd-fonts
 ```bash
@@ -99,7 +99,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 1. Create a new SSH key and symbolic links
 ```bash
-	powershell -executionpolicy bypass -File .\ps1\create-and-configure-ssh.ps1
+    powershell -executionpolicy bypass -File .\ps1\create-and-configure-ssh.ps1
 ```
 **OR**
 
@@ -129,8 +129,8 @@ EXA is coming!
 
 1. Install extensions
 ```bash
-	powershell -executionpolicy bypass -File .\ps1\install-extensions.ps1
-	powershell -executionpolicy bypass -File .\ps1\install-java-extensions.ps1
+    powershell -executionpolicy bypass -File .\ps1\install-extensions.ps1
+    powershell -executionpolicy bypass -File .\ps1\install-java-extensions.ps1
 ```
 
 # Setup WSL2 :
