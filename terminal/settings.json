@@ -380,7 +380,7 @@
             {
                 "action": "closeTab"
             },
-            "keys": "ctrl+shift+w"
+            "keys": "ctrl+shift+q"
         },
         {
             "command": 
@@ -395,7 +395,7 @@
         },
         {
             "command": "closePane",
-            "keys": "ctrl+shift+q"
+            "keys": "ctrl+shift+w"
         },
         {
             "command": 
