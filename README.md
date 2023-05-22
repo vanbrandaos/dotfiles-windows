@@ -209,11 +209,6 @@ EXA is coming!
     powershell -executionpolicy bypass -File .\ps1\install-arch.ps1
 ```
 2. Reset Terminal, go to Arch folder (C:/wsl/Arch) and [Setup ArchWSL for user and keyrings](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/) 
-3. See Arch [.dotfiles](https://github.com/vanbrandaos/.dotfiles)
-4. Install find-the-command and set fish as default shell (This sh belongs a [.dotfiles](https://github.com/vanbrandaos/.dotfiles))
-```bash
-    ./scripts/wsl/setup-fish.sh
-```
-#
-	
+3. See Arch [.dotfiles](https://github.com/vanbrandaos/.dotfiles) (only Arch distros)
+#	
 ![windows terminal](terminal/img/screenshot.png)
