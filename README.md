@@ -13,10 +13,10 @@ Usually as Linux host (with WSL), on Windows I just keep initial configs, that i
 - Custom Windows Start Menu
 - Scoop and Chocolatey (package manager)
 - Packages list (wsl, dev, utils) installed via chocolatey
-- Windows Terminal (custom settings.json)
-- Git (SSH keys and aliases)
+- Windows Terminal (custom settings.json) + Starship + NerdFonts
+- Git - SSH keys and Bash aliases (on Windows)
 - Code (and Java/JavaScript extensions)
-- WSL (using ArchWSL)
+- WSL setup and ArchWSL (distro)
 
 # :warning: Using PowerShell:
 
@@ -42,7 +42,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 **Need active Group Policy Editor. On Windows Home, this funcionability has inactive by default.* 
 
-# Initial Settings
+# Initial Settings (Pre-Requirements)
 
 1. Install [Scoop](https://scoop.sh/) (**Running the scoop installer as administrator is disabled by default, run powershell with user privileges**)
 ```bash
@@ -85,7 +85,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 
 # Windows Terminal
 
-1. If you didn't install it, install Windows Terminal (option 5) or skip
+1. If you didn't install it, install Windows Terminal (option 3) or skip
 ```bash
     powershell -executionpolicy bypass -File .\ps1\install-chocolatey-packages.ps1
 ```
@@ -93,9 +93,13 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```bash
     powershell -executionpolicy bypass -File .\ps1\setup-windows-terminal.ps1
 ```
+
 *Note: The custom settings bring up profiles that may not exist, such as WSL Arch (see below). You may need to change Terminal Profiles later. *
+*Note: To install only Windows Terminal, run **choco install microsoft-windows-terminal** on PowerShell*
 
 # Git (and Git Bash)
+Settings on/for Windows. Skip if you don't want keep your ssh key here, neither aliases for Bash and simulations for ls command.
+
 
 1. Create a new SSH key and symbolic links
 ```bash
@@ -114,7 +118,7 @@ To import, open gpedit.msc (Menu > Run) and set a path on User Configuration > A
 ```
 3. Replace 'ls' command ([LSDeluxe](https://github.com/Peltoche/lsd#installation)):
 
-	3.1  ~~First, the best way to install lsd was using 'scoop install lsd', but at moment (April 2022) scoop install 0.21.0 and Git bash cant handle the 256 color scheme thats introduced in lsd version 0.21. We need [download and install](https://github.com/Peltoche/lsd/releases) lsd 0.20, extract and update $PATH with new lsd path (suggestion: ~/lsd). Open ~/.bashrc and update ls alias (lsd -la)~~. 
+	3.1  ~~First, the best way to install lsd was using 'scoop install lsd', but at moment (April 2022) scoop install 0.21.0 and Git bash cant handle the 256 color scheme thats introduced in lsd version 0.21. We need [download and install](https://github.com/Peltoche/lsd/releases) lsd 0.20, extract and update $PATH with new lsd path (suggestion: ~/lsd). Open ~/.bashrc and update ls alias (lsd -la)~~. *Bug on 0.21.
 
 	3.2. Yes, i can do it:
 ```bash
