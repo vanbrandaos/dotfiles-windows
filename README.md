@@ -169,13 +169,7 @@ EXA is coming!
 
 ***Warnings***:
 
-1. WSL does not have a init system. With Docker, you can use daemons like 'sudo dockerd' or install a alternative systemd (like [genie](https://github.com/arkane-systems/genie)). If you're using W11, see propertie "boot" in wsl.conf file. It's a good idea create a shell to wrap all startup operations.
-	```bash
-	[boot]
-	command = sudo dockerd start
-	```
-	*This archive beloings under the path /etc/wsl.conf. If the file not there, you can create it yourself. WSL detect the existence of the file and will read its contents. All distributions use this file independently.*
-2. IP address on WSL2 machine cannot be made static (If this is me being an idiot, I'm not the only one):
+1. IP address on WSL2 machine cannot be made static (If this is me being an idiot, I'm not the only one):
 
 	- Custom domain:
 
@@ -198,7 +192,7 @@ EXA is coming!
 
 		**Microsoft already provides a solution to access your Linux services on Windows configuring [networking] tag on wsl.conf archive.* 
 		**Other machines on your local network will not see the WSL network services unless you do some port forwarding (and firewall rules)*
-3. Launch GUI applications: Only works in W11. For W10, try [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/). 
+2. Launch GUI applications: Only works in W11. For W10, try [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/). 
   
 # WSL Distro: ArchWSL
 
