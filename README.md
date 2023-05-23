@@ -152,7 +152,7 @@ EXA is coming!
 	```
 	*This option install Ubuntu. You can use 'wsl --install -d <Distribution Name>' to set another distro.*
 
-* Option 2: If you just prefer a clean install
+* Option 2: If you just prefer a clean install (also for older versions of WSL)
 	- Enable WSL
 		```bash
 		    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart 
