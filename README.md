@@ -182,17 +182,7 @@ EXA is coming!
 
 		*Find another solutions, like [Go-WSL2-Host](https://github.com/shayne/go-wsl2-host).*
 
-	- Localhost:
-		```
-		Turn off fast startup
-		In WSL2, /etc/hosts lists 'localhost' as '127.0.0.1'
-		In Windows (build 19041) 'localhost' resolves to ::1
-		So the server in WSL was listening on 127.0.0.1 and the browser was trying to reach ::1
-		```
-
-		**Microsoft already provides a solution to access your Linux services on Windows configuring [networking] tag on wsl.conf archive.* 
-		**Other machines on your local network will not see the WSL network services unless you do some port forwarding (and firewall rules)*
-2. Launch GUI applications: Only works in W11. For W10, try [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/). 
+2. Launch GUI applications: For W10, try [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/). 
   
 # WSL Distro: ArchWSL
 
