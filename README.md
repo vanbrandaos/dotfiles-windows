@@ -143,6 +143,8 @@ EXA is coming!
 ```bash
     Copy-Item "C:\Users\$env:UserName\dotfiles-windows\wsl\.wslconfig" -Destination "C:\Users\$env:UserName\"
 ```
+*[Advanced settings configuration in WSL](https://learn.microsoft.com/en-us/windows/wsl/wsl-config#wslconfig)*
+
 2. Install WSL:
 * Option 1: You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 
 	```bash
