@@ -9,4 +9,5 @@ memory=8GB
 
 
 #guiApplications= true
+localhostForwarding=true
 
