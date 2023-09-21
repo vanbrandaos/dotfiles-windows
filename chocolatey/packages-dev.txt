@@ -2,7 +2,6 @@ vcredist140
 openjdk17
 nodejs
 yarn
-postgresql12
 maven
 eclipse
 vscode
@@ -10,3 +9,4 @@ starship
 git
 openssh
 postman
+obsidian
